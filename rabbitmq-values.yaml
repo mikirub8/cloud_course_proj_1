@@ -1,0 +1,16 @@
+# RabbitMQ Helm values for basic service setup (matching your docker-compose)
+
+image:
+  repository: bitnami/rabbitmq
+  tag: latest
+
+service:
+  managerPortEnabled: true
+  ports:
+    amqp: 5672
+    manager: 15672
+
+# Use default guest/guest credentials for local dev, like Docker Compose
+auth:
+  username: guest
+  password: guest
